@@ -14,21 +14,23 @@
     <link rel="stylesheet" href="./assets/menu.css">
     <link rel="stylesheet" href="./assets/style.css">
 </head>
-<body class="main-bg">
+<body>
+    <input id="close-menu" class="close-menu" type="checkbox" aria-label="Close menu" role="button">
+    <label class="close-menu-label" for="close-menu" title="Close menu"></label>
     <aside class="menu white-bg">
         <div class="main-content menu-content">
-            <h1>
+            <h1 onclick="getElementById('close-menu').checked = false;">
                 <a href="#home">LOGO</a>
             </h1>
 
             <nav>
-                <ul>
+                <ul onclick="getElementById('close-menu').checked = false;">
                     <li><a href="#intro">Intro</a></li>
                     <li><a href="#top3">Top 3</a></li>
                     <li><a href="#gallery">Gallery</a></li>
                     <li><a href="#work">Work</a></li>
                     <li><a href="#pricing">Pricing</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -181,5 +183,53 @@
             </div>
         </div>
     </section>
+
+     <section id="contact" class="intro main-bg section">
+        <div class="main-content intro-content">
+            <div class="intro-text-content">
+                <h2>We are glad to meet you here!</h2>
+                <p>To wrap up January, we are proud to bring you the release of Firefox 85. In this version we are bringing you support for the :focus-visible pseudo-class in CSS and associated devtools, and the complete removal of Flash support from Firefox.</p>
+            </div>
+            <div class="intro-img">
+                <img src="./assets/img/javascript.svg" alt="Logo de HTML, CSS e JS.">
+            </div>
+
+            <div class="contact-form">
+                    <fieldset class="form-grid">
+                        <legend>Contact me</legend>
+
+                        <div class="form-group">
+                            <label for="firstname">First name</label>
+                            <input type="text" name="first-name" id="first-name" placeholder="Your first name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lastname">Last name</label>
+                            <input type="text" name="Last-name" id="last-name" placeholder="Your last name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" name="email" id="email" placeholder="Your e-mail">
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" cols="30" rows="10" placeholder="your message"></textarea>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <button type="submit">Send message</button>
+                        </div>
+                    </fieldset>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer" class="footer white-bg">
+        <p>Feito com carinho <span class="heart">&hearts;</span> por Caio Marcilio</p>
+    </footer>
+
+    <a class="back-to-top" href="#">➤</a>
 </body>
 </html>
